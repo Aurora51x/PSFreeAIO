@@ -1861,12 +1861,9 @@ function PayloadLoader(Pfile)
 }
 
 kexploit().then(() => {
-
-//Load ABC fix as a regular Payload
-setTimeout(PayloadLoader("aio_patches.bin"),500);
-log("AIO Fixes Applied.!");
-//Load GoldHEN :)
-setTimeout(PayloadLoader("goldhen.bin"),500);
-log("GoldHEN Loaded.!");
-
+    setTimeout(PayloadLoader("aio_patches.bin"), 500);
+    log("AIO Fixes Applied.!");
+    setTimeout(PayloadLoader("goldhen.bin"), 500);
+    log("GoldHEN Loaded.!");
+    runBinLoader(); // <-- add this
 })
